@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CompanyListComponent } from './company-list/company-list.component';
-import { CompanyDetailComponent } from './company-detail/company-detail.component';
-import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component';
+import { CompanyListComponent } from '../page/company-list/company-list.component';
+import { CompanyDetailComponent } from '../page/company-detail/company-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CompanyItemComponent } from './company-item/company-item.component';
@@ -13,9 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
-        CompanyListComponent,
-        CompanyDetailComponent,
-        CompanyYandexMapComponent,
         HeaderComponent,
         CompanyItemComponent,
         CompanySortComponent,
@@ -28,10 +24,12 @@ import { HttpClientModule } from '@angular/common/http';
     ],
     exports: [
         HeaderComponent,
-        CompanyListComponent
+        CompanyItemComponent,
+        CompanySortComponent,
+        CompanyFilterComponent
     ],
     providers: [
-        CompanyService
+        CompanyService,
     ],
 })
 export class ComponentsModule {}

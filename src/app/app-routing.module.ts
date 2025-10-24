@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './page/layout-component/layout-component.component';
-import { CompanyListComponent } from './components/company-list/company-list.component';
-import { CompanyDetailComponent } from './components/company-detail/company-detail.component';
-import { CompanyYandexMapComponent } from './components/company-yandex-map/company-yandex-map.component';
+import { LayoutComponent } from './layouts/layout-component/layout-component.component';
+import { CompanyListComponent } from './page/company-list/company-list.component';
+import { CompanyDetailComponent } from './page/company-detail/company-detail.component';
+import { CompanyYandexMapComponent } from './page/company-yandex-map/company-yandex-map.component';
 
 const routes: Routes = [
   { 

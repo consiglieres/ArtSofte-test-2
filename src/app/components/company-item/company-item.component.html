@@ -1,8 +1,10 @@
-<button class="item">
+<button class="item" (click)="onCompanyClick()">
     <section class="item_logo">
-
+        <img [src]="company.logo">
     </section>
     <section class="item_information">
-
+        <h3 class="item_infaormation_buisness-name">Наименование: {{fullBusinessName}}</h3>
+        <p class="item_information_industry">Отрасль деятельности: {{company.industry}}</p>
+        <p class="item_information_tupe">Тип: {{company.type}}</p>
     </section>
 </button>

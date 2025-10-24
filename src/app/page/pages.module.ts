@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout-component/layout-component.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/component.module';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component';
+import { CompanyService } from '../services/company.servise';
 
 @NgModule({
     declarations: [
-        LayoutComponent
+        CompanyDetailComponent,
+        CompanyListComponent,
+        CompanyYandexMapComponent
     ],
     imports: [ 
         CommonModule,
@@ -14,6 +19,8 @@ import { ComponentsModule } from '../components/component.module';
         ComponentsModule,
     ],
     exports: [],
-    providers: [],
+    providers: [
+        CompanyService
+    ],
 })
 export class PagesModule {}

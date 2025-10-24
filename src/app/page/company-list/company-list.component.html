@@ -1,0 +1,8 @@
+<main class="company-list">
+    <app-company-filter class="company-list_filter"></app-company-filter>
+    <app-company-sort class="company-list_sort"></app-company-sort>
+
+    @for (company of companyes$ | async; track companyes$) {
+        <app-company-item class="company-list_item" [company]="company"></app-company-item>
+    }
+</main>
