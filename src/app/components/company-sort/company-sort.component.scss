@@ -1,0 +1,56 @@
+.company-sort {
+  margin-bottom: 20px;
+
+  .company-sort_title {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .company-sort__section {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .company-sort__select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    min-width: 180px;
+
+    &:focus {
+      outline: none;
+      border-color: #1976d2;
+    }
+  }
+
+  .company-sort_direction-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #1976d2;
+    }
+  }
+}

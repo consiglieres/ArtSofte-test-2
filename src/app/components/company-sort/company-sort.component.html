@@ -1,1 +1,24 @@
-<p>company-sort works!</p>
+<main class="company-sort">
+  <h3 class="company-sort_title">Сортировка компаний</h3>
+
+  <section class="company-sort__section">
+    <select
+      [value]="currentSort.field"
+      (change)="onSortFieldChange($any($event.target).value)"
+      class="company-sort__select"
+    >
+      @for (field of sortFields; track field.value) {
+      <option [value]="field.value">{{ field.label }}</option>
+      }
+    </select>
+
+    <button
+      type="button"
+      (click)="onSortDirectionChange()"
+      class="company-sort_direction-btn"
+      [title]="getSortTitle()"
+    >
+      {{ getSortIcon() }}
+    </button>
+  </section>
+</main>

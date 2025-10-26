@@ -4,18 +4,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-
   constructor(private router: Router) {}
 
   public navigateToMap(): void {
-    this.router.navigate(['/map'])
+    this.router.navigate(['/map']);
   }
 
   public navigateToList(): void {
-    this.router.navigate(['/list'])
+    this.router.navigate(['/list']);
   }
-
 }

@@ -9,8 +9,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: left;
-  margin-top: 10px;
-  
+
   &:hover {
     border-color: #1976d2;
     box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
@@ -20,10 +19,10 @@
     transform: translateY(1px);
   }
 
-  &_logo {
+  .item_logo {
     flex-shrink: 0;
     margin-right: 16px;
-    
+
     img {
       width: 60px;
       height: 60px;
@@ -32,13 +31,13 @@
     }
   }
 
-  &_information {
+  .item_information {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 8px;
 
-    &_buisness-name {
+    .item_infaormation_buisness-name {
       margin: 0;
       font-size: 18px;
       font-weight: 600;
@@ -46,14 +45,14 @@
       line-height: 1.4;
     }
 
-    &_industry {
+    .item_information_industry {
       margin: 0;
       font-size: 14px;
       color: #666;
       line-height: 1.4;
     }
 
-    &_tupe {
+    .item_information_tupe {
       display: inline-block;
       padding: 4px 12px;
       background: #f5f5f5;

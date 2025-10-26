@@ -1,1 +1,46 @@
-<p>company-filter works!</p>
+<main class="filter-companies">
+  <h3 class="filter-companies__title">Фильтрация компаний</h3>
+
+  <form class="filter-companies__form" [formGroup]="filterForm">
+    <section class="filter-companies__field">
+      <label class="filter-companies__label" for="search"
+        >Поиск по названию:</label
+      >
+      <input
+        class="filter-companies__input"
+        id="search"
+        type="text"
+        formControlName="search"
+        placeholder="Введите название компании"
+      />
+    </section>
+
+    <section class="filter-companies__field">
+      <label class="filter-companies__label" for="industry"
+        >Вид деятельности:</label
+      >
+      <select
+        class="filter-companies__select"
+        id="industry"
+        formControlName="industry"
+      >
+        <option value="">Все виды деятельности</option>
+        @for (industry of uniqueIndustries$ | async; track industry) {
+        <option class="filter-companies__option" [value]="industry">
+          {{ industry }}
+        </option>
+        }
+      </select>
+    </section>
+
+    <section class="filter-companies__field">
+      <button
+        class="filter-companies__button filter-companies__button--secondary"
+        type="button"
+        (click)="resetFilters()"
+      >
+        Сбросить фильтры
+      </button>
+    </section>
+  </form>
+</main>

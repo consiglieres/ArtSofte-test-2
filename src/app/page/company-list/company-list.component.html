@@ -1,8 +1,15 @@
 <main class="company-list">
+  <nav class="company-list_nav">
     <app-company-filter class="company-list_filter"></app-company-filter>
     <app-company-sort class="company-list_sort"></app-company-sort>
+  </nav>
 
-    @for (company of companyes$ | async; track companyes$) {
-        <app-company-item class="company-list_item" [company]="company"></app-company-item>
+  <section class="company-list_content">
+    @for (company of companies$ | async; track companies$) {
+    <app-company-item
+      class="company-list_item"
+      [company]="company"
+    ></app-company-item>
     }
+  </section>
 </main>

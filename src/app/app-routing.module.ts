@@ -6,7 +6,7 @@ import { CompanyDetailComponent } from './page/company-detail/company-detail.com
 import { CompanyYandexMapComponent } from './page/company-yandex-map/company-yandex-map.component';
 
 const routes: Routes = [
-  { 
+  {
     path: '', 
     component: LayoutComponent,
     children: [

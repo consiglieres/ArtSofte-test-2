@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CompanyService } from '../../services/company.servise';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-layout-component',

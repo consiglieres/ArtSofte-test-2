@@ -1,23 +1,31 @@
 <main class="company-detail">
-    <button routerLink="/" class="back-button">← Назад к списку</button>
+  <button routerLink="/" class="back-button">← Назад к списку</button>
 
-    <section class="company-detail_logo">
-        <img [src]="company.logo" />
-    </section>
+  <section class="company-detail_logo">
+    <img [src]="getLogo()" />
+  </section>
 
-    <section class="company-detail_header">
-        <h3 class="company-detail_header_business-name">Наименование: {{company.business_name}}</h3>
-        <p class="company-detail_header_catch-phrase">Лозунг: {{company.catch_phrase}}</p>
-    </section>
+  <section class="company-detail_header">
+    <h3 class="company-detail_header_business-name">
+      Наименование: {{ company.suffix }} {{ company.business_name }}
+    </h3>
+    <p class="company-detail_header_catch-phrase">
+      Слоган: {{ company.catch_phrase }}
+    </p>
+  </section>
 
-    <section class="company-detail_information">
-        <h3>Основная информациия:</h3>
-        <p>Отрасль: {{company.industry}}</p>
-        <p>Тип компании: {{company.type}}</p>
-        <p class="company-detail_information_fill-address">Адресс: {{company.full_address}}</p>
-    </section>
+  <section class="company-detail_information">
+    <h3>Основная информациия:</h3>
+    <p>Отрасль: {{ company.industry }}</p>
+    <p>Тип компании: {{ company.type }}</p>
+    <p class="company-detail_information_fill-address">
+      Адресс: {{ company.full_address }}
+    </p>
+  </section>
 
-    <section class="company-detail_contact">
-        <p class="company-detail_contact_phone-number">Телефон: {{company.phone_number}}</p>
-    </section>
+  <section class="company-detail_contact">
+    <p class="company-detail_contact_phone-number">
+      Телефон: {{ company.phone_number }}
+    </p>
+  </section>
 </main>
