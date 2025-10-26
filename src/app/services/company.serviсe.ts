@@ -64,7 +64,6 @@ export class CompanyService {
       .subscribe({
         next: (response) => {
           this.companiesSubject.next(response.data);
-          console.log(response.data);
         },
         error: (error) => {
           console.error('Ошибка загрузки компаний:', error);
@@ -119,13 +118,5 @@ export class CompanyService {
     const matchesIndustry: boolean =
       !filters.industry || company.industry === filters.industry;
     return matchesSearch && matchesType && matchesIndustry;
-  }
-
-  public validationLogoUrl(logo: string | undefined): string {
-    if (typeof logo === 'undefined') {
-      return String(logo);
-    } else {
-      return '../../../assets/загрузка.jpg';
-    } 
   }
 }

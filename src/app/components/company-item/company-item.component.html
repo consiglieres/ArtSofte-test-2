@@ -1,6 +1,7 @@
 <button class="item" (click)="onCompanyClick()">
   <section class="item_logo">
-    <img [src]="getLogo()" />
+    <img [src]="company.logo" 
+    (error)="company.logo = '../../../assets/загрузка.jpg'" />
   </section>
   <section class="item_information">
     <h3 class="item_infaormation_buisness-name">

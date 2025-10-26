@@ -11,14 +11,7 @@ import { CompanyService } from '../../services/company.serviсe';
 export class CompanyItemComponent {
   @Input() company!: ICompany;
 
-  constructor(
-    private _router: Router,
-    private _companyService: CompanyService
-  ) {}
-
-  public getLogo(): string {
-    return this._companyService.validationLogoUrl(this.company.logo);
-  }
+  constructor(private _router: Router) {}
 
   public onCompanyClick(): void {
     this._router.navigate(['/detail', this.company.id]);

@@ -2,7 +2,10 @@
   <button routerLink="/" class="back-button">← Назад к списку</button>
 
   <section class="company-detail_logo">
-    <img [src]="getLogo()" />
+    <img
+      [src]="company.logo"
+      (error)="company.logo = '../../../assets/загрузка.jpg'"
+    />
   </section>
 
   <section class="company-detail_header">
