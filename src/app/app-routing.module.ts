@@ -7,31 +7,32 @@ import { CompanyYandexMapComponent } from './page/company-yandex-map/company-yan
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: '', 
-        component: CompanyListComponent
+        path: '',
+        redirectTo: 'list',
+        pathMatch: 'full',
       },
       {
         path: 'list',
-        component: CompanyListComponent
+        component: CompanyListComponent,
       },
       {
         path: 'detail/:id',
-        component: CompanyDetailComponent
+        component: CompanyDetailComponent,
       },
       {
         path: 'map',
-        component: CompanyYandexMapComponent
-      }
-    ]
-  }
+        component: CompanyYandexMapComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
