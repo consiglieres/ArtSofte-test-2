@@ -5,7 +5,7 @@
   </nav>
 
   <section class="company-list_content">
-    @for (company of companies$ | async; track companies$) {
+    @for (company of companies$ | async; track company.id) {
     <app-company-item
       class="company-list_item"
       [company]="company"
